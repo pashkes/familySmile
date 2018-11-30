@@ -1,0 +1,17 @@
+.button {
+  padding: 10px 16px;
+  border: none;
+  background-color: $orange;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  line-height: 1.82;
+  text-align: center;
+  transition: $transition-base;
+  &:hover {
+    background-color: darken($orange, 10%);
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  font: 300 14px/1.57 'Ubuntu', 'PT Sans', sans-serif;
+  color: $warm-grey;
+  @include media-breakpoint-up(md) {
+    line-height: 1.71;
+  }
+}
+a {
+  transition: $transition-base;
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.container {
+  padding-right: 24px;
+  padding-left: 24px;
+  @include media-breakpoint-up(md) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+/*
+  This will hide the focus indicator if the element receives focus via the mouse,
+  but it will still show up on keyboard focus.
+*/
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
