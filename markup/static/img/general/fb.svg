@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 11 23">
+  <defs>
+    <path id="a" d="M7.3 23H2.4V11.5H0v-4h2.4V5.2C2.4 1.9 3.8 0 7.7 0H11v4H9c-1.6 0-1.7.5-1.7 1.6v2H11l-.4 4H7.3V23z"/>
+  </defs>
+  <clipPath id="b">
+    <use overflow="visible" xlink:href="#a"/>
+  </clipPath>
+  <g clip-path="url(#b)">
+    <defs>
+      <path id="c" d="M0 0h11v23H0z"/>
+    </defs>
+    <clipPath id="d">
+      <use overflow="visible" xlink:href="#c"/>
+    </clipPath>
+    <path d="M-5-5h21v33H-5z" clip-path="url(#d)"/>
+  </g>
+</svg>

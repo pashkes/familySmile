@@ -1,0 +1,376 @@
+.header {
+  &__company-info {
+    padding: 6px 0;
+    @include media-breakpoint-up(md) {
+      padding: 10px 0;
+    }
+  }
+  &__metro-stations {
+    @include resetList();
+    display: flex;
+  }
+  &__station {
+    margin: 0 10px;
+  }
+  &__small-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 13px;
+    &--clock {
+      padding-left: 22px;
+      background: transparent url(__static__general/clock.svg) left center no-repeat;
+      background-size: 16px 16px;
+    }
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    padding: 1px 0;
+    color: #fff;
+    line-height: 1;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50%;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      padding: 2px 0;
+    }
+    &--yellow {
+      background-color: #ffc125;
+    }
+    &--brown {
+      background-color: #754c24;
+    }
+  }
+  &__main {
+    position: relative;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    background-image: linear-gradient(273deg, #298c7b, #64bd68 99%);
+    @include media-breakpoint-up(md) {
+      padding-top: 12px;
+      padding-bottom: 14px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
+    @include media-breakpoint-up(md) {
+      padding-right: 0;
+    }
+  }
+  &__logo {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 33px;
+    margin-right: 22px;
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+      width: 40px;
+      height: 46px;
+      margin-right: 4px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: auto;
+      height: auto;
+      overflow: inherit;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      @include media-breakpoint-up(xl) {
+        display: block;
+        position: relative;
+        width: 246px;
+        height: 100%;
+      }
+    }
+  }
+  &__nav {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      display: block;
+      width: auto;
+      height: auto;
+      overflow: inherit;
+    }
+    &.opened {
+      display: block;
+      .header__menu-wrapper {
+        opacity: 1;
+      }
+    }
+  }
+  &__menu-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 36px 0;
+    background-image: linear-gradient(273deg, #298c7b, #64bd68 99%);
+    z-index: 2;
+    opacity: 0;
+    transition: $transition-base;
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      position: relative;
+      opacity: 1;
+      width: auto;
+      min-height: auto;
+      background-image: none;
+    }
+  }
+  &__menu-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 62px;
+    height: 62px;
+    border: none;
+    background: transparent url(__static__general/close.svg) center no-repeat;
+    background-size: 14px 14px;
+  }
+  &__menu {
+    @include resetList;
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 4px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    &:hover {
+      .header__link--dropdown {
+        &::before {
+          @include media-breakpoint-up(md) {
+            transform: rotate(-180deg);
+            visibility: visible;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          background-color: darken($orange, 10%);
+          color: #fff;
+        }
+      }
+      .header__dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    &--active {
+      .header__link {
+        background-color: $orange;
+        border-radius: 16px;
+        &:hover {
+          background-color: darken($orange, 10%);
+          color: #fff;
+          @include media-breakpoint-up(md) {
+            background-color: transparent;
+            color: $orange;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  &__link, &__dropdown-link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6px 23px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.82;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      letter-spacing: 0;
+    }
+  }
+  &__link {
+    border-radius: 16px;
+    &--dropdown {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        border-color: #ffffff transparent transparent transparent;
+        transform: translateY(-50%);
+        opacity: 1;
+        visibility: hidden;
+        z-index: 1;
+        transform-origin: top center;
+        @include media-breakpoint-up(md) {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__dropdown {
+    @include resetList;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 18px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 9px 8px 9px;
+      border-color: transparent transparent #ffffff transparent;
+      opacity: 0;
+      visibility: hidden;
+      @include media-breakpoint-up(md) {
+        opacity: 1;
+        visibility: hidden;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 100%;
+      min-width: 224px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      box-shadow: 0 0 15px 0 #00000026;
+      background-color: #ffffff;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: $transition-base;
+    }
+  }
+  &__dropdown-item {
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+  &__dropdown-link {
+    @include media-breakpoint-up(md) {
+      color: $warm-grey;
+    }
+  }
+  &__toggle-menu {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    transform: translateY(-50%);
+  }
+  &__icon-burger {
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: #fff;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+    }
+    &::before {
+      top: 13px;
+    }
+    &::after {
+      bottom: 13px;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include media-breakpoint-up(md) {
+      margin-left: 0;
+    }
+  }
+  &__tel {
+    margin-right: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    @include media-breakpoint-up(md) {
+      margin-right: 0;
+      font-size: 16px;
+      padding-right: 24px;
+      padding-left: 16px;
+      font-weight: 400;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 36px;
+      padding-left: 36px;
+      font-size: 24px;
+    }
+  }
+  &__order-call {
+    width: 40px;
+    height: 40px;
+    background: transparent url(__static__general/phone.svg) no-repeat center;
+    background-size: 17px 17px;
+    border: none;
+    @include media-breakpoint-up(md) {
+      width: auto;
+      height: auto;
+      min-width: 160px;
+      background-color: $orange;
+      background-image: none;
+    }
+    @include media-breakpoint-up(xl) {
+      min-width: 194px;
+    }
+  }
+}

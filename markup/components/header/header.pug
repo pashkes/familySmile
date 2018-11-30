@@ -1,0 +1,61 @@
+mixin header(data)
+  header.header
+    .header__company-info
+      .container
+        .row.justify-content-center.justify-content-xl-start
+          .col-auto
+            h1.visually-hidden Стоматология для детей и взрослых
+            ul.header__metro-stations
+              li.header__station.header__small-text
+                span(aria-hidden="true").header__icon.header__icon--yellow м
+                | Таганская
+              li.header__station.header__small-text
+                span(aria-hidden="true").header__icon.header__icon--brown м
+                | Марксисткая
+          .col-auto.d-none.d-md-block
+            p.header__small-text.header__small-text--clock
+              | 9:00&#160;&#8212; 20:00, ежедневно, без обеда и&#160;выходных
+          .col-auto.d-none.d-xl-block.ml-auto
+            p.header__small-text Качественная стоматология в&#160;Москве для детей и&#160;взрослых!
+    .header__main
+      .container
+        .header__inner
+          a(href="#").header__logo
+            img(src="__static__img/general/logo.svg" alt="Стоматология для детей и взрослых")
+          nav(role="navigation").header__nav
+            button(type="button" aria-expanded="false" aria-controls="menu").header__toggle-menu.js-show-menu.d-md-none
+              span.header__icon-burger
+            .header__menu-overlay.js-menu-wrapper
+              .header__menu-wrapper
+                button(aria-label="закрыть меню" aria-hidden="false").header__menu-close.d-md-none
+                  +icon('close', 14,14).js-menu-close
+                ul.header__menu#menu
+                  li.header__item.header__item--active
+                    a(href="#").header__link О клинике
+                  li.header__item#menu-services
+                    a(href="#" role="button" aria-haspopup="true" aria-expanded="false").header__link.header__link--dropdown.d-none.d-md-block услуги
+                    ul(aria-labelby="menu-services").header__dropdown
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Детская стоматология
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Ортодонтия
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Имплантология
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Хирургия
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Парадонтология
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Эндодонтия
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Профилактика и гигиена
+                      li.header__dropdown-item
+                        a(href="#").header__dropdown-link Терапия
+                  li.header__item
+                    a(href="#").header__link Контакты
+          .header__contacts
+            a(href="tel:+74951542628").header__tel 7 495 154-26-28
+            button(type="button" aria-label="Открыть модальное окно").header__order-call.button
+              +icon('phone', 18, 18).d-md-none
+              .header__text.d-none.d-md-inline Заказать звонок
+
