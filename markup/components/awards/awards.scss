@@ -1,0 +1,20 @@
+.awards {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #f2f2f2;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 26px;
+    padding-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 60px;
+    padding-bottom: 66px
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+}
