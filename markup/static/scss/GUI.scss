@@ -26,6 +26,7 @@
     &:hover {
       background-color: $orange;
       color: #fff;
+      border-color: $orange;
     }
   }
   &--xs-expanded {
@@ -325,12 +326,28 @@
   }
 }
 .tabs {
-  &__content {
-    &[aria-hidden="false"] {
-      display: block;
+  @include resetList;
+  &__link {
+    padding: 11px 24px;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $black;
+    transition: none;
+    line-height: 1.6;
+    &:hover {
     }
-    &[aria-hidden="true"] {
-      display: none;
+    &.active {
+      border-radius: 20px;
+      background-color: $orange;
+      color:#fff;
+      &:hover {
+        color:#fff;
+        background-color: darken($orange, 10%);
+      }
     }
   }
 }

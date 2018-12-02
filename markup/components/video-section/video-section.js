@@ -35,6 +35,7 @@
     controls: false,
     navPosition: 'bottom',
     autoHeight: true,
-    arrowKeys: true
+    arrowKeys: true,
+    gutter: 24
   });
 })();
