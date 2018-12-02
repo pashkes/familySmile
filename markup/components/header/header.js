@@ -11,4 +11,23 @@
     menuWrapper.classList.remove('opened');
     menuButton.setAttribute('aria-expanded', 'false');
   });
+
+
+  const requestBtn = document.querySelector('.js-modal-request');
+  requestBtn.addEventListener('click', () => {
+    const form = document.querySelector('.request-modal .js-request-form');
+
+    if (!form) return;
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // if form success
+      const close = document.querySelector('.js-modal-close');
+      close.click();
+      const success = document.querySelector('.js-request-success');
+      success.click();
+    })
+  })
+
 })();
