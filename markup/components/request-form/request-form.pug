@@ -1,0 +1,10 @@
+mixin request-form(data)
+    form(action="post").request-form.form#request
+        .request-form__field-wrapper
+            label(for="request-name").visually-hidden Ваше имя
+            input(placeholder="Представьтесь, пожалуйста" required).form__field.form__field--black#request-name
+        .request-form__field-wrapper
+            label(for="request-mail").visually-hidden Ваш номер телефона
+            input(type="tel" placeholder="Контактный номер телефона*" required).form__field.form__field--black#request-mail
+        button.request-form__submit.button.button--primary.button--xs-expanded отправить заявку
+        

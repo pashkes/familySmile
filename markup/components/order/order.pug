@@ -11,10 +11,10 @@ mixin order(data)
                 .order__row-fields
                   .order__field-wrapper
                     label(for="order-name").visually-hidden Ваше имя
-                    input(placeholder="Представьтесь, пожалуйста" required).form__field#order-name
+                    input(placeholder="Представьтесь, пожалуйста" required).form__field.form__field--white#order-name
                   .order__field-wrapper
                     label(for="order-mail").visually-hidden Ваш номер телефона
-                    input(type="tel" placeholder="Контактный номер телефона*" required).form__field#order-mail
+                    input(type="tel" placeholder="Контактный номер телефона*" required).form__field.form__field--white#order-mail
                 button.order__submit.button.button--primary.button--xs-expanded отправить заявку
               p.order__requirement.
                 Нажимая на&#160;кнопку &#171;Отправить заявку&#187;, я&#160;даю свое <a href="#">согласие на&#160;обработку персоналных данных</a> в&#160;соответствии
