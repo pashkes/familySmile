@@ -1,0 +1,29 @@
+.section-gradient {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background-image: linear-gradient(93deg, #298c7b, #64bd68 99%);
+  @include media-breakpoint-up(md) {
+    padding-top: 28px;
+    padding-bottom: 34px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  &__title {
+    color: #fff;
+    text-align: center;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 28px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 36px;
+    }
+  }
+}

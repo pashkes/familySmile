@@ -1,0 +1,73 @@
+- var listPrice = ['Первичный прием', 'Лечение и реставрация молочных зубов', 'Лечение кариеса', 'Лечение постоянных зубов', 'Исправление прикуса до 12 лет', 'удаление молочных зубов', 'Пластика уздечки языка и губы', 'Анестезиология']
+mixin price(data)
+  section.price
+    .container
+      h2.price__title.title-large Цены&#160;на стоматологические услуги
+      p.price__subtitle.subtitle.
+        Мы&#160;не&#160;вводим пациентов в&#160;заблуждение и&#160;до&#160;начала оказания услуги указываем ее&#160;полную стоимость, включающую
+        в&#160;себя обязательные и&#160;дополнительные манипуляции.
+    .container
+      .price__inner
+        .row
+          .col-xl-4
+            .price__header.d-xl-none
+              select.price__select.form__select#select-price
+                each optionText in listPrice
+                  option #{optionText}
+              label(for="#select-price").btn-underline-dash
+                span.btn-underline-dash__text.btn-underline-dash__text--orange выбрать услугу
+            .js-tabs.d-none.d-xl-block
+              ul(data-tabs).tabs
+                li
+                  a(href='#tab-1' data-tab).tabs__link Первичный прием
+                li
+                  a(href='#tab-2' data-tab).tabs__link Лечение и реставрация молочных зубов
+                li
+                  a(href='#tab-3' data-tab).tabs__link Лечение кариеса
+                li
+                  a(href='#tab-4' data-tab).tabs__link Лечение постоянных зубов
+                li
+                  a(href='#tab-5' data-tab).tabs__link Исправление прикуса до 12 лет
+                li
+                  a(href='#tab-6' data-tab aria-selected="true").tabs__link.active удаление молочных зубов
+                li
+                  a(href='#tab-7' data-tab).tabs__link Пластика уздечки языка и губы
+                li
+                  a(href='#tab-8' data-tab).tabs__link Анестезиология
+
+          .col-xl-8
+            div(data-tabs-content).price__content.tab-content
+              div(data-tabs-pane)#tab-1.tab-pane
+                | here the content of 1 tab
+              div(data-tabs-pane)#tab-2.tab-pane
+                | here the content of 2 tab
+              div(data-tabs-pane)#tab-3.tab-pane
+                | here the content of 3 tab
+              div(data-tabs-pane)#tab-4.tab-pane
+                | here the content of 4 tab
+              div(data-tabs-pane)#tab-5.tab-pane
+                | here the content of 5 tab
+              div(data-tabs-pane)#tab-6.tab-pane.active
+                .price__images
+                  div(role="list").row
+                    div(role="listitem").col-md-6
+                      .price__img.price__img--first
+                        img(src="__static__img/content/girl.jpg" alt="девочка с молочным зубом")
+                    div(role="listitem").col-md-6.d-none.d-md-flex
+                      .price__img
+                        img(src="__static__img/content/table.jpg" alt="таблица молочных зубов")
+                .price__desc
+                  p.
+                    Врач удаляет молочный зуб под местной анестезией, чтобы снизить дискомфорт для маленького пациента. Если у&#160;ребенка бывают аллергические реакции, врач использует анестетик, не&#160;вызывающий аллергию. Врач может назначить дату контрольного осмотра после удаления, если это необходимо.
+                .row.align-items-center
+                  .col-md-auto
+                    a(href="#").price__buy.button.button--outline.button--xs-expanded стоимость от 1 700 рублей
+                  .col-md
+                    a(href="#").price__download.btn-underline-dash
+                      span.btn-underline-dash__text.btn-underline-dash__text--orange Анкета первичного приема для детей
+                      span.btn-underline-dash__additional-text PDF  1,3 Mb
+              div(data-tabs-pane)#tab-7.tab-pane
+                | here the content of 7 tab
+              div(data-tabs-pane)#tab-8.tab-pane
+                | here the content of 8 tab
+

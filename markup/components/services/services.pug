@@ -1,0 +1,28 @@
+mixin serciveCard(data)
+  .services__item
+    .services__body
+      .services__img
+        picture
+          source(media="(min-width: 1216px)" srcset="__static__img/content/" + data.img + '.jpg'+', __static__img/content/'+ data.img + '@2x.jpg 2x')
+          source(media="(min-width: 768px)" srcset="__static__img/content/" + data.imgTablet + '.jpg')
+          img(src="__static__img/content/" + data.img + '.jpg' alt=data.alt)
+      .services__title-card
+        h3.services__name !{data.title}
+    .services__hover
+      .services__hover-inner
+        a(href="#").services__button.button.button--primary Врачи
+        a(href="#").services__button.button.button--outline цены
+mixin services(data)
+  section.services
+    .container
+      h2.services__title.title-large Услуги детской стоматологии
+      .subtitle
+        p.services__subtitle.expand-more.js-expand-more Предоставляем все услуги детской стоматологии: от&#160;удаления молочных зубов до&#160;решения ортодонтических проблем. Наши врачи применяют
+          span(aria-labelledby="label_expand_1").expand-more__text.js-to_expand &#160;комплексный подход, что гарантирует безопасность и&#160;высокое качество проведения стоматологических процедур. FamilySmile&#160;&#8212; это бережное профессиональное лечение, индивидуальный подход и&#160;комфортная атмосфера для вашего ребенка.
+          button(aria-controls="expand_1" aria-expanded="false" type="button").expand-more__button.expand-more__button--text-center.js-expandmore
+            span Показать больше
+
+      div(role="list").row
+        each item in data
+          div(role="listitem").col-md-6.col-xl-3
+            +serciveCard(item)

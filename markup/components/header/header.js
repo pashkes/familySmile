@@ -4,7 +4,6 @@
   const close = menuWrapper.querySelector('.js-menu-close');
   menuButton.addEventListener('click', function (evt) {
     const target = evt.target.closest('.js-show-menu');
-    console.log(target);
     target.setAttribute('aria-expanded', 'true');
     menuWrapper.classList.add('opened');
   });
@@ -13,4 +12,3 @@
     menuButton.setAttribute('aria-expanded', 'false');
   });
 })();
-

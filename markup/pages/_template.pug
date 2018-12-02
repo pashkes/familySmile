@@ -1,2 +1,29 @@
-extends _default-template
-block main
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/footer/footer
+  include ../components/header/header
+  include ../components/icon/icon
+  include ../components/services/services
+  include ../components/video-section/video-section
+  include ../components/statistics/statistics
+  include ../components/doctors/doctors
+  include ../components/features/features
+  include ../components/order/order
+  include ../components/patients/patients
+  include ../components/price/price
+
+  head
+    +head()
+  body.page
+    .page-wrapper
+      +header()
+      block main
+      +footer(footer)
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

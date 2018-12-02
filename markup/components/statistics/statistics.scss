@@ -1,0 +1,115 @@
+.statistics {
+  padding-top: 26px;
+  padding-bottom: 20px;
+  background-color: $grey;
+  @include media-breakpoint-up(md) {
+    padding-top: 28px;
+    padding-bottom: 34px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 48px;
+    padding-bottom: 58px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    text-align: center;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 32px;
+    }
+    span {
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
+  &__item {
+    text-align: center;
+    max-width: 204px;
+    margin-right: auto;
+    margin-left: auto;
+    @include media-breakpoint-up(md) {
+      max-width: 100%;
+    }
+    &--green-100 {
+      color: #5bb768;
+      .statistics__text  {
+        @include media-breakpoint-up(xl) {
+          max-width: 165px;
+        }
+        span {
+          display: block;
+          @include media-breakpoint-up(xl) {
+            display: inline;
+          }
+        }
+      }
+    }
+    &--green-200 {
+      color: #399d67;
+      .statistics__text {
+        @include media-breakpoint-up(xl) {
+          max-width: 165px;
+        }
+        span {
+          @include media-breakpoint-up(md) {
+            display: block;
+          }
+          @include media-breakpoint-up(xl) {
+            display: inline;
+          }
+        }
+      }
+    }
+    &--green-300 {
+      color: #238d66;
+      .statistics__text {
+        @include media-breakpoint-up(xl) {
+          max-width: 165px;
+        }
+      }
+    }
+    &--green-400 {
+      color: #298c7b;
+      .statistics__text {
+        @include media-breakpoint-up(xl) {
+          max-width: 210px;
+        }
+      }
+    }
+  }
+  &__value {
+    font-size: 98px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -4.9px;
+    @include media-breakpoint-up(md) {
+      display: block;
+      margin-bottom: 12px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 8px;
+      font-size: 148px;
+      letter-spacing: -7.4px;
+    }
+  }
+  &__text {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 6px;
+    font-weight: 700;
+    line-height: 1.45;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      letter-spacing: 0.3px;
+    }
+    @include media-breakpoint-up(lg) {
+      letter-spacing: .6px;
+    }
+
+  }
+}

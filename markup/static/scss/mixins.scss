@@ -28,9 +28,28 @@
   text-align: justify;
   text-justify: newspaper;
 }
+
+// You can add your own mixins here:
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
 @mixin resetList {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-// You can add your own mixins here:

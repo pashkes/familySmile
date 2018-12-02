@@ -1,0 +1,23 @@
+mixin itemStat(number, text)
+  .statistics__item&attributes(attributes)
+    span.statistics__value #{number}
+    p.statistics__text !{text}
+
+mixin statistics(data)
+  section.statistics
+    .container
+      h2.statistics__title.title-large Почему нас выбирают
+      .subtitle
+        p.statistics__subtitle Более 8&#160;лет мы&#160;успешно работаем в&#160;сфере детских стоматологических услуг. Мы&#160;не&#160;экономим на&#160;оборудовании и&#160;материалах, в&#160;нашей клинике используются только современные высокотехнологичные установки, качественные безопасные материалы и&#160;медикаменты.
+          span Для нас важно здоровье вашего ребенка!
+      .row
+        .col-md-3
+          +itemStat('60','<span>сложных лечений</span> под наркозом в год').statistics__item--green-100
+        .col-md-3
+          +itemStat('8','<span>лет успешной</span> работы с&#160;детьми').statistics__item--green-200
+        .col-md-3
+          +itemStat( '3', 'дня нашему самому маленькому пациенту').statistics__item--green-300
+        .col-md-3
+          +itemStat('200','ортодонтических аппаратов ежегодно').statistics__item--green-400
+
+

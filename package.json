@@ -14,7 +14,10 @@
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4"
+    "babel-loader": "^8.0.4",
+    "tiny-slider": "^2.8.8",
+    "van11y-accessible-hide-show-aria": "^3.0.1",
+    "van11y-accessible-tab-panel-aria": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",

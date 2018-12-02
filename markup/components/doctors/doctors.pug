@@ -1,0 +1,42 @@
+- var listServices = [ 'все врачи', 'Детские стоматологи', 'Терапевты и эндодонтисты', 'Ортопеды', 'Ортодонты', 'Хирурги и Имплантологи', 'Анестезиологи', 'другие специалисты' ];
+mixin doctorCard(data)
+  .doctors__item
+    .doctors__photo
+      img(src="__static__img/content/"+data.photo+'.jpg' alt=data.name)
+    .doctors__info
+      h3.doctors__name.title-medium
+        cite !{data.name}
+      span.doctors__kind #{data.kind}
+    .doctors__about-wrapper
+      p.doctors__about !{data.about}
+
+mixin doctors(data)
+  section.doctors.section-gradient
+    .container
+      h2.section-gradient__title.title-large Наши врачи
+      .section-gradient__nav.form
+        select.doctors__select.form__select.form__select--expanded-xs.d-md-none#select-doctors
+          each optionText in listServices
+            option #{optionText}
+        label(for="select-doctors").btn-underline-dash.d-md-none
+          span.btn-underline-dash__text.btn-underline-dash__text--white выбрать врача по специализации
+        div(role="group" aria-label="выбрать врача по специализации").btn-group.d-none.d-md-flex
+          each btnText, index in listServices
+            if index === 0
+              button(type="button").btn-underline-dash.active.js-button-group
+                span.btn-underline-dash__text.btn-underline-dash__text--white #{btnText}
+            else
+              button(type="button").btn-underline-dash.js-button-group
+                span.btn-underline-dash__text.btn-underline-dash__text--white #{btnText}
+    .slider
+      button(type="button" aria-label="предыдущий слайд").slider__arrow.slider__arrow--prev.js-doctors-control-prev-slider
+      button(type="button" aria-label="следующий слайд").slider__arrow.slider__arrow--next.js-doctors-control-next-slider
+      .slider__wrapper
+        .slider__container
+          div(role="list").js-slider-doctors
+            each card in data
+              div(role="listitem")
+                +doctorCard(card)
+
+
+

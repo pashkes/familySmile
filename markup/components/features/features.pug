@@ -1,0 +1,46 @@
+mixin features(data)
+  .features
+    .container
+      .row
+        .col-xl-6
+          .features__photos
+            .features__large-photo
+              img(src="__static__img/content/features-photo-1.jpg" alt="Команда врачей")
+            .features__medium-photo
+              img(src="__static__img/content/features-photo-sm-1.jpg" alt="Профессиональный подход")
+            .features__medium-photo
+              img(src="__static__img/content/features-photo-sm-2.jpg" alt="кабинет №3")
+        .col-xl
+          .features__text-cotnent
+            article.features__item
+              h3.features__title.title-medium Команда врачей
+              .features__desc
+                p.expand-more.js-expand-more
+                  | Детские стоматологи FamilySmile — высококвалифицированные специалисты, владеющие современными методиками диагностики и лечения. Они стремятся максимально сохранить объем здоровых тканей зубов, стараются использовать малоинвазивные методы
+                  span(aria-labelledby="label_expand_1").expand-more__text.js-to_expand  (если это возможно), чтобы сделать процесс лечения более комфортным. Специалисты FamilySmile постоянно повышают квалификацию в России и за рубежом.
+                  button(aria-controls="expand_1" aria-expanded="false" type="button").expand-more__button.js-expandmore
+                    span Показать больше
+            article.features__item
+              h3.features__title.title-medium Профессиональный подход
+              .features__desc
+                p.expand-more.js-expand-more
+                  | Врач проводит тщательное обследование при первичном осмотре.
+                  | В случае необходимости выполняет диагностику с 3D-визуализацией для тщательного изучения возможных стоматологических проблем, привлекает специалистов по направлениям. Если вы
+                  span(aria-labelledby="label_expand_1").expand-more__text.js-to_expand  хотите контролировать результаты нашей работы, то врач может продемонстрировать ситуацию в полости рта на снимках интраоральной камеры.
+                  button(aria-controls="expand_1" aria-expanded="false" type="button").expand-more__button.js-expandmore
+                    span Показать больше
+            article.features__item
+              h3.features__title.title-medium Качественное оборудование
+              .features__desc
+                p.expand-more.js-expand-more
+                  | В арсенале клиники FamilySmile: оборудование финской компании Planmeсa, ортодонтичеcкие аппараты, брекеты
+                  | и пломбировочные материалы от мировых лидеров стоматологического рынка. Высокое качество оборудования
+                  | и материалов положительно отражается на комфорте пациента и результатах лечения.
+            article.features__item
+              h3.features__title.title-medium Консилиум специалистов
+              .features__desc
+                p.expand-more.js-expand-more
+                  | Если в&#160;ходе обследования врач обнаруживает подозрения на&#160;скрытые проблемы, то&#160;пациент направляет к&#160;узкоквалифицированному специалисту. Врачи FamilySmile составляют комплексный план лечения, где за&#160;конкретную стоматологическую задачу
+                  span(aria-labelledby="label_expand_4").expand-more__text.js-to_expand отвечает соответствующий специалист: ортодонт, эндодонтист, ортопед или хирург. Такой комплексный подход обеспечивает более эффективное лечение.
+                  button(aria-controls="expand_1" aria-expanded="false" type="button").expand-more__button.js-expandmore
+                    span Показать больше

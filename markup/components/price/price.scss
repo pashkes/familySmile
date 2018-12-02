@@ -1,0 +1,100 @@
+.price {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #f2f2f2;
+  @include media-breakpoint-up(md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__inner {
+    padding: 32px 24px 20px;
+    background-color: #fff;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 32px;
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 0 48px;
+      min-height: 610px;
+    }
+  }
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+  &__subtitle {
+    margin-bottom: 28px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  &__select {
+    width: 100%;
+    margin-bottom: 6px;
+    @include media-breakpoint-up(md) {
+      max-width: 368px;
+    }
+  }
+  &__content {
+    @include media-breakpoint-up(xl) {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+  &__images {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 26px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 40px;
+    }
+  }
+  &__img {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    &--first {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__desc {
+    color: #707070;
+    padding-bottom: 6px;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 10px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 25px;
+    }
+    p {
+      color: inherit;
+    }
+  }
+  &__buy {
+    margin-bottom: 8px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+  &__download,
+  &__label {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &__download {
+    span {
+      text-transform: none;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
