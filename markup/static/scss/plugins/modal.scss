@@ -1,0 +1,85 @@
+/* needed for old browsers */
+dialog {
+  display: block;
+  border: 0;
+}
+
+/* removes scroll when modal is opened */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* overlay covers everything */
+.modal-overlay,
+.request-modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: $black;
+  opacity: 0.9;
+  z-index: 666;
+  cursor: pointer;
+}
+
+/* modal */
+.modal,
+.request-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 15%;
+  width: 90%;
+  max-width: 384px;
+  padding: 36px 16px;
+  background: #fff;
+  z-index: 667;
+  animation: pop ease .5s 1 normal;
+
+  .request-modal-close {
+    @extend .hidden;
+  }
+
+  .modal-close-icon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+
+    >.icon {
+      fill: $warm-grey;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.request-modal {
+  .request-form {
+    margin-bottom: 38px;
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    max-height: 100%;
+    width: 70%;
+  }
+}

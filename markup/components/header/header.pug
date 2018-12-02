@@ -55,6 +55,6 @@ mixin header(data)
                     a(href="#").header__link Контакты
           .header__contacts
             a(href="tel:+74951542628").header__tel +7 495 154-26-28
-            button(type="button" aria-label="Открыть модальное окно").header__order-call.button.button--primary
+            button(type="button" aria-label="Открыть модальное окно" data-modal-content-id="modal-request" data-modal-prefix-class="request" data-modal-focus-toid="request-close").js-modal.js-modal-request.header__order-call.button.button--primary
               +icon('phone', 18, 18).d-md-none
               .header__text.d-none.d-md-inline Заказать звонок

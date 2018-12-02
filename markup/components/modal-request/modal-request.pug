@@ -1,0 +1,7 @@
+mixin modal-request(data)
+    .modal-request.hidden#modal-request
+        button(type="button" aria-label="Закрыть модальное окно")#request-close.js-modal-close.modal-close-icon
+            +icon('close', 8, 8)
+        h2.title-large.modal-request__title Заявка на звонок
+        +request-form()
+        p.modal-request__text Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, я&nbsp;даю свое <a href="#">согласие на&nbsp;обработку персоналных данных</a> в&nbsp;соответствии с&nbsp;требованиями Федерального закона от&nbsp;27.07.2006г. &#8470;&nbsp;152-ФЗ (ред.&nbsp;от 29.07.2017) &laquo;О&nbsp;персональных данных&raquo;.

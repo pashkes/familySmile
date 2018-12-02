@@ -1,0 +1,7 @@
+mixin modal-success(data)
+    .modal-success.hidden#modal-success
+        button(type="button" aria-label="Закрыть модальное окно")#success-close.js-modal-close.modal-close-icon
+            +icon('close', 8, 8)
+        h2.title-large.modal-success__title Спасибо, ваша завка отправлена!
+        p.modal-success__text Ближайшее время наш менеджер свяжется с&nbsp;вами и&nbsp;ответит на&nbsp;все интересующие вас вопросы, а&nbsp;так&nbsp;же поможет подобрать удобное для вас время приема.
+        button.button.button--outline.button--xs-expande.modal-success__close.js-modal-close(type="button") закрыть
