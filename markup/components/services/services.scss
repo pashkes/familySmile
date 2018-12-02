@@ -34,7 +34,8 @@
     @include media-breakpoint-up(md) {
       min-height: 288px;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       .services__hover {
         overflow: inherit;
         max-height: 143px;
