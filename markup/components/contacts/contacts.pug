@@ -1,0 +1,58 @@
+- var listcontacts = ['м.Таганская (кольцевая)', 'м.таганская (радиальная)', 'м.марксисткая', 'на автомобиле']
+mixin contacts(data)
+  section.contacts.section-gradient
+    .container
+      h2.section-gradient__title.title-large Как к&#160;нам добраться?
+      .section-gradient__nav.form
+        select.doctors__select.form__select.form__select--expanded-xs.d-md-none#select-address
+          option м.Таганская (кольцевая)
+          option(selected) м.таганская (радиальная)
+          option м.марксисткая
+          option на автомобиле
+        label(for="select-address").btn-underline-dash.d-md-none
+          span.btn-underline-dash__text.btn-underline-dash__text--white выбрать станцию метро
+        ul(data-tabs).contacts__tabs.tabs.d-none.d-md-flex
+          li.contacts__tab
+            a(href='#tab-address-1' data-tab).btn-underline-dash.tabs__link
+              span.btn-underline-dash__text.btn-underline-dash__text--white м.Таганская (кольцевая)
+          li.contacts__tab
+            a(href='#tab-address-2' data-tab).btn-underline-dash.tabs__link.active
+              span.btn-underline-dash__text.btn-underline-dash__text--white м.таганская (радиальная)
+          li.contacts__tab
+            a(href='#tab-address-3' data-tab).btn-underline-dash.tabs__link
+              span.btn-underline-dash__text.btn-underline-dash__text--white м.марксисткая
+          li.contacts__tab
+            a(href='#tab-address-4' data-tab).btn-underline-dash.tabs__link
+              span.btn-underline-dash__text.btn-underline-dash__text--white на автомобиле
+      div(data-tabs-content).tab-content
+        div(data-tabs-pane)#tab-address-1.contacts__tab-content.tab-pane
+          | tab content 1
+        div(data-tabs-pane)#tab-address-2.contacts__tab-content.tab-pane.active
+          .row.flex-xl-row-reverse
+            .col-xl-auto
+              .contacts__map-wrapper
+                .contacts__contacts.d-xl-none
+                  address.contacts__address Москва, Воронцовская, 20
+                  a(href="tel:+74951542628").contacts__tel + 7 495 154-26-28
+                .contacts__map
+                  img(src="__static__img/content/map.png" alt="Москва, Воронцовская, 20")
+            .col-xl
+              .contacts__info
+                .contacts__contacts.d-none.d-xl-block
+                  address.contacts__address Москва, Воронцовская, 20
+                  a(href="tel:+74951542628").contacts__tel + 7 495 154-26-28
+                .contacts__content-text
+                  p.
+                    Выход из&#160;метро единственный. Необходимо перейти площадь через несколько пешеходных переходов, первый из&#160;которых расположен правее выхода из&#160;метро.
+                  p.
+                    В&#160;качестве ориентира служит зеленое пятиэтажное здание на&#160;противоположной стороне площади, в&#160;начале двух улиц развилки дорог. После прохода пешеходных переходов вам необходимо оказаться правее этого здания, на&#160;правой стороне улицы. Пойти по&#160;правой стороне&#160;ул. Воронцовская в&#160;сторону области до&#160;ближайшего перекрестка, перейти дорогу, пройти мимо остановки общественного транспорта.
+
+                  p.
+                    Вход в&#160;клинику со&#160;стороны&#160;ул. Воронцовская через открытые черные ворота в&#160;центре комплекса зданий с&#160;красным фасадом,
+                    с&#160;белой отделкой архитектурных элементов.
+                .contacts__duration-road Время в пути: 10-12 минут
+
+        div(data-tabs-pane)#tab-address-3.contacts__tab-content.tab-pane
+          | tab content 3
+        div(data-tabs-pane)#tab-address-4.contacts__tab-content.tab-pane
+          | tab content 4
