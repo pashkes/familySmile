@@ -3,7 +3,7 @@ mixin price(data)
   section.price
     .container
       h2.price__title.title-large Цены&#160;на стоматологические услуги
-      p.price__subtitle.subtitle.
+      p.price__subtitle.
         Мы&#160;не&#160;вводим пациентов в&#160;заблуждение и&#160;до&#160;начала оказания услуги указываем ее&#160;полную стоимость, включающую
         в&#160;себя обязательные и&#160;дополнительные манипуляции.
     .container
@@ -11,29 +11,34 @@ mixin price(data)
         .row
           .col-xl-4
             .price__header.d-xl-none
-              select.price__select.form__select#select-price
-                each optionText in listPrice
-                  option #{optionText}
+              select.price__select.form__select#select-price.js-select-services
+                option(value="tab-1") Первичный прием
+                option(value="tab-2") Лечение и реставрация молочных зубов
+                option(value="tab-3") Лечение кариеса
+                option(value="tab-4") Лечение постоянных зубов
+                option(value="tab-5") Исправление прикуса до 12 лет
+                option(value="tab-6" selected) удаление молочных зубов
+                option(value="tab-7") Пластика уздечки языка и губы
+                option(value="tab-8") Анестезиология
               label(for="#select-price").btn-underline-dash
                 span.btn-underline-dash__text.btn-underline-dash__text--orange выбрать услугу
-            .js-tabs.d-none.d-xl-block
-              ul(data-tabs).tabs
-                li
-                  a(href='#tab-1' data-tab).tabs__link Первичный прием
-                li
-                  a(href='#tab-2' data-tab).tabs__link Лечение и реставрация молочных зубов
-                li
-                  a(href='#tab-3' data-tab).tabs__link Лечение кариеса
-                li
-                  a(href='#tab-4' data-tab).tabs__link Лечение постоянных зубов
-                li
-                  a(href='#tab-5' data-tab).tabs__link Исправление прикуса до 12 лет
-                li
-                  a(href='#tab-6' data-tab aria-selected="true").tabs__link.active удаление молочных зубов
-                li
-                  a(href='#tab-7' data-tab).tabs__link Пластика уздечки языка и губы
-                li
-                  a(href='#tab-8' data-tab).tabs__link Анестезиология
+            ul(data-tabs).price__tabs.tabs.js-tabs-price.d-none.d-xl-block
+              li.price__item-tab
+                a(href='#tab-1' data-tab).tabs__link Первичный прием
+              li.price__item-tab
+                a(href='#tab-2' data-tab).tabs__link Лечение и реставрация молочных зубов
+              li.price__item-tab
+                a(href='#tab-3' data-tab).tabs__link Лечение кариеса
+              li.price__item-tab
+                a(href='#tab-4' data-tab).tabs__link Лечение постоянных зубов
+              li.price__item-tab
+                a(href='#tab-5' data-tab).tabs__link Исправление прикуса до 12 лет
+              li.price__item-tab
+                a(href='#tab-6' data-tab aria-selected="true").tabs__link.active удаление молочных зубов
+              li.price__item-tab
+                a(href='#tab-7' data-tab).tabs__link Пластика уздечки языка и губы
+              li.price__item-tab
+                a(href='#tab-8' data-tab).tabs__link Анестезиология
 
           .col-xl-8
             div(data-tabs-content).price__content.tab-content

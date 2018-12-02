@@ -1,0 +1,111 @@
+.contacts {
+  @include media-breakpoint-up(xl) {
+    min-height: 738px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &__header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__contacts {
+    margin-bottom: 8px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+      margin-bottom: 5px;
+    }
+  }
+  .section-gradient__nav {
+    margin-bottom: 6px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 52px;
+    }
+  }
+  &__address,
+  &__tel {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      padding: 0 7px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 18px;
+      letter-spacing: -0.2px;
+    }
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+      padding: 0;
+    }
+  }
+  &__address {
+    @include media-breakpoint-up(xl) {
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+  }
+  &__map-wrapper {
+    max-width: 672px;
+  }
+  &__info {
+    @include media-breakpoint-up(xl) {
+      padding-right: 6px;
+    }
+  }
+  &__tab-content {
+    color: #fefefe;
+    &.active {
+      min-height: 392px;
+    }
+  }
+  &__content-text {
+    padding-top: 16px;
+    color: #fefefe;
+    @include media-breakpoint-up(md) {
+      padding-top: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 16px;
+    }
+    p {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 20px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+  &__duration-road {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    @include media-breakpoint-up(xl) {
+      max-width: 100%;
+    }
+  }
+}

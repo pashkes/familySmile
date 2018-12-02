@@ -5,11 +5,11 @@
   border-bottom: 1px solid #e1e1e1;
   background-color: #f2f2f2;
   @include media-breakpoint-up(md) {
-    padding-top: 40px;
+    padding-top: 26px;
     padding-bottom: 34px;
   }
   @include media-breakpoint-up(xl) {
-    padding-top: 72px;
+    padding-top: 48px;
     padding-bottom: 64px;
   }
   &__title {

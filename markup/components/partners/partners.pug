@@ -1,0 +1,34 @@
+mixin partners(data)
+  section.partners
+    .container
+      h2.partners__title.title-large Стоматологическая помощь ДМС
+      p.partners__subtitle.
+        Наша клиника активно сотрудничает со&#160;страховыми компаниями по&#160;программам
+        добровольного медицинского страхования
+      .partners__logos
+        .row.align-items-center.justify-content-sm-center
+          .col-6.col-sm-3
+            .partners__logo
+              img(src="__static__img/content/"+data[0].url+'.png' alt=data[0].name)
+          .col-6.col-sm-3
+            .partners__logo
+              img(src="__static__img/content/" + data[1].url + '.png' alt=data[1].name)
+          .col-6.col-sm-3
+            .partners__logo
+              img(src="__static__img/content/" + data[2].url + '.png' alt=data[2].name)
+          .col-6.col-sm-3
+            .partners__logo
+              img(src="__static__img/content/" + data[3].url + '.png' alt=data[3].name)
+        .row.align-items-center.justify-content-center
+          .col-md(aria-hidden="true")
+          .col.col-md
+            .partners__logo
+              img(src="__static__img/content/" + data[4].url + '.png' alt=data[4].name)
+          .col.col-md
+            .partners__logo
+              img(src="__static__img/content/" + data[5].url + '.png' alt=data[5].name)
+          .col.col-md
+            .partners__logo
+              img(src="__static__img/content/" + data[6].url + '.png' alt=data[6].name)
+          .col-md(aria-hidden="true")
+
