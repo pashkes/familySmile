@@ -1,0 +1,8 @@
+mixin awards-slide(data)
+  .awards-item__photo
+    img(src="__static__img/content/" + data.img + '.jpg' srcset="__static__img/content/" + data.img + '-large.jpg 2x' alt=data.title)
+
+mixin awards-item(data)
+  figure.awards-item
+    +awards-slide(data)
+    figcaption.awards-item__caption !{data.title}
