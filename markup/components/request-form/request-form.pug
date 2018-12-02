@@ -1,10 +1,10 @@
 mixin request-form(data)
-    form(action="post").request-form.form#request
+    form(action="post").js-request-form.request-form.form#request
         .request-form__field-wrapper
             label(for="request-name").visually-hidden Ваше имя
             input(placeholder="Представьтесь, пожалуйста" required).form__field.form__field--black#request-name
         .request-form__field-wrapper
             label(for="request-mail").visually-hidden Ваш номер телефона
             input(type="tel" placeholder="Контактный номер телефона*" required).form__field.form__field--black#request-mail
-        button.request-form__submit.button.button--primary.button--xs-expanded отправить заявку
-        
+        button.request-form__submit.button.button--primary.button--xs-expanded(type="submit") отправить заявку
+        button.js-request-success.js-modal.hidden(type="button" aria-label="Открыть модальное окно" data-modal-content-id="modal-success" data-modal-prefix-class="request" data-modal-focus-toid="success-close") отправить заявку

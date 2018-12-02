@@ -1,1 +1,22 @@
+.modal-success {
+  &__title {
+    margin-bottom: 46px;
+    line-height: 1.14;
+  }
 
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: -0.1px;
+    color: rgba($black, 0.7);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__close {
+    width: 100%;
+    margin-top: 102px;
+  }
+}

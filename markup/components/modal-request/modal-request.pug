@@ -1,6 +1,6 @@
 mixin modal-request(data)
     .modal-request.hidden#modal-request
-        button(type="button" aria-label="Закрыть модальное окно").js-modal-close.modal-close-icon
+        button(type="button" aria-label="Закрыть модальное окно")#request-close.js-modal-close.modal-close-icon
             +icon('close', 8, 8)
         h2.title-large.modal-request__title Заявка на звонок
         +request-form()

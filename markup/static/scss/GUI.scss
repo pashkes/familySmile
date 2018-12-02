@@ -274,12 +274,12 @@
     border: none;
     border-bottom: 2px solid;
     background-color: transparent;
-    color: #fff;
     line-height: 1;
     font-size: 14px;
 
     &--white {
       border-color: #fff;
+      color: #fff;
 
       @include placeholder {
         font-family: 'Ubuntu', 'PT Sans', sans-serif;
@@ -292,6 +292,7 @@
 
     &--black {
       border-color: $black;
+      color: $black;
 
       @include placeholder {
         font-family: 'Ubuntu', 'PT Sans', sans-serif;
