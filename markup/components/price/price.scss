@@ -128,5 +128,11 @@
       width: 368px;
     }
   }
+  .tab-pane__inner {
+    min-height: 400px;
+    @include media-breakpoint-up(md) {
+      min-height: 220px;
+    }
+  }
 }
 
