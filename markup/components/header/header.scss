@@ -178,7 +178,7 @@
           }
         }
         @include media-breakpoint-up(md) {
-          background-color: darken($orange, 10%);
+          background-color: $orange;
           color: #fff;
         }
       }
@@ -203,7 +203,7 @@
         background-color: $orange;
         border-radius: 16px;
         &:hover {
-          background-color: darken($orange, 10%);
+          background-color: $orange;
           color: #fff;
           @include media-breakpoint-up(md) {
             background-color: transparent;
@@ -230,6 +230,10 @@
   }
   &__link {
     border-radius: 16px;
+    &:hover {
+      background-color: $orange;
+      color: #fff;
+    }
     &--dropdown {
       &::before {
         content: '';

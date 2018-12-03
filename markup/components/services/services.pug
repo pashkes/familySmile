@@ -3,26 +3,27 @@ mixin serciveCard(data)
     .services__body
       .services__img
         picture
-          source(media="(min-width: 1216px)" srcset="__static__img/content/" + data.img + '.jpg'+', __static__img/content/'+ data.img + '@2x.jpg 2x')
-          source(media="(min-width: 768px)" srcset="__static__img/content/" + data.imgTablet + '.jpg')
+          source(media="(min-width: 1216px)" srcset="__static__img/content/" + data.img + '.jpg')
+          if data.imgTablet
+            source(media="(min-width: 768px)" srcset="__static__img/content/" + data.imgTablet + '.jpg')
           img(src="__static__img/content/" + data.img + '.jpg' alt=data.alt)
       .services__title-card
         h3.services__name !{data.title}
     .services__hover
       .services__hover-inner
         a(href="#").services__button.button.button--primary Врачи
-        a(href="#").services__button.button.button--outline цены
+        if anchor
+          a(href="#price").anchor.services__button.button.button--outline #{data.btnText}
+        else
+          a(href="#").services__button.button.button--outline #{data.btnText}
 mixin services(data)
   section.services
     .container
-      h2.services__title.title-large Услуги детской стоматологии
+      h2.services__title.title-large !{data.title}
       .subtitle
-        p.services__subtitle.expand-more.js-expand-more Предоставляем все услуги детской стоматологии: от&#160;удаления молочных зубов до&#160;решения ортодонтических проблем. Наши врачи применяют
-          span.expand-more__text.js-to_expand &#160;комплексный подход, что гарантирует безопасность и&#160;высокое качество проведения стоматологических процедур. FamilySmile&#160;&#8212; это бережное профессиональное лечение, индивидуальный подход и&#160;комфортная атмосфера для вашего ребенка.
-          button(type="button").expand-more__button.expand-more__button--text-center.js-expandmore
-            span Показать больше
+        p.services__subtitle.expand-more.js-expand-more !{data.subtitle}
 
       div(role="list").row
-        each item in data
+        each item in data.list
           div(role="listitem").col-md-6.col-xl-3
             +serciveCard(item)
