@@ -20,7 +20,7 @@ mixin doctors(data)
           select.doctors__select.form__select.form__select--expanded-xs#select-doctors
             each optionText in listServices
               option #{optionText}
-        button(type="button").btn-underline-dash.d-md-none.js-simulate-click-to-select
+        button(type="button")#close-select-doctors.btn-underline-dash.d-md-none
           span.btn-underline-dash__text.btn-underline-dash__text--white выбрать врача по специализации
         div(role="group" aria-label="выбрать врача по специализации").btn-group.d-none.d-md-flex
           each btnText, index in listServices

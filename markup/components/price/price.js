@@ -8,6 +8,7 @@ tabby.init();
   });
 
   var selectPrice = new CustomSelect({
-    elem: 'select-price'
+    elem: 'select-price',
+    close: 'close-select-price'
   });
 })();

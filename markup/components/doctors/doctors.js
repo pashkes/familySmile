@@ -32,12 +32,10 @@
     });
   };
 })();
+
 (function () {
   const select = new CustomSelect({
-    elem: 'select-doctors'
-  });
-  const btnToSelect = document.querySelector('.js-simulate-click-to-select');
-  btnToSelect.addEventListener('click', function () {
-    select.open();
+    elem: 'select-doctors',
+    close: 'close-select-doctors'
   });
 })();
