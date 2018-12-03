@@ -37,6 +37,7 @@
     @include media-breakpoint-up(md) {
       min-height: 288px;
     }
+
     &:hover,
     &:focus {
       .services__hover {
@@ -69,6 +70,9 @@
       min-height: 72px;
       background: #fff;
     }
+    @include media-breakpoint-up(xl) {
+      margin-top: auto;
+    }
   }
   &__img {
     position:relative;
@@ -79,6 +83,10 @@
       width: 100%;
       flex-grow: 1;
       height: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-grow: 0;
+      height: auto;
     }
     img {
       width: 100%;
@@ -92,6 +100,10 @@
         left: 0;
         object-position: center;
         font-family: 'object-fit: cover; object-position: center;';
+      }
+      @include media-breakpoint-up(xl) {
+        width: auto;
+        height: auto;
       }
     }
   }
