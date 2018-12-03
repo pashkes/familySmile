@@ -1,3 +1,35 @@
 mixin footer(data)
+  include ../social/social
   footer.footer
-    //| #{data.title}
+    .footer__top-row
+      .container
+        .row.justify-content-center.align-items-start
+          .col-xl-auto.d-none.d-xl-block
+            a(href="#")
+              img(src="__static__img/general/logo-secondary.svg" width="246" height="52" alt="Стомотология для детей и взрослых").footer__logo
+          .col-xl-6
+            .footer__license
+              p
+                | Анкета первичного приема для&#160;
+                a(href="#") взрослых
+                | &#160;и&#160;
+                a(href="#") детей
+              p
+                a(href="#") Политика компании
+                | &#160;в&#160;области обработки персональных данных
+              p
+                a(href="#") Лицензия на&#160;осуществление медицинской&#160;деятельности
+                span &#160;&#8470;&#160;ЛО-77-01-015508&#160;от&#160;19.01.18
+          .col-md-auto.align-self-xl-center.ml-xl-auto
+            +social(social)
+    .footer__bottom-row
+      .container
+        .row.justify-content-center.justify-content-xl-start
+          .col-xl-7
+            small.footer__copy-text.
+              Вся информация, размещенная на&#160;сайте, носит информационный характер и&#160;ни&#160;при каких условиях не&#160;является
+              публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса&#160;РФ.
+          .col-auto.ml-xl-auto
+            .footer__copy-link
+              small.footer__title-small Разработка и&#160;продвижение сайта&#160;
+              a(href="#").footer__creators Ашманов и&#160;партнеры

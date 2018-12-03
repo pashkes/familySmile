@@ -122,4 +122,11 @@
       font-weight: 400;
     }
   }
+  .js-Dropdown {
+    width: 224px;
+    @include media-breakpoint-up(md) {
+      width: 368px;
+    }
+  }
 }
+

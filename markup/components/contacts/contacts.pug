@@ -1,15 +1,17 @@
 - var listcontacts = ['м.Таганская (кольцевая)', 'м.таганская (радиальная)', 'м.марксисткая', 'на автомобиле']
 mixin contacts(data)
-  section.contacts.section-gradient
+  section.contacts.section-gradient#contacts
     .container
       h2.section-gradient__title.title-large Как к&#160;нам добраться?
       .section-gradient__nav.form
-        select.doctors__select.form__select.form__select--expanded-xs.d-md-none#select-address
-          option м.Таганская (кольцевая)
-          option(selected) м.таганская (радиальная)
-          option м.марксисткая
-          option на автомобиле
-        label(for="select-address").btn-underline-dash.d-md-none
+        .d-md-none
+          label(for="select-contacts").visually-hidden
+          select.doctors__select.form__select.form__select--expanded-xs.d-md-none#select-contacts
+            option м.Таганская (кольцевая)
+            option(selected) м.таганская (радиальная)
+            option м.марксисткая
+            option на автомобиле
+        button(type="button").btn-underline-dash.d-md-none
           span.btn-underline-dash__text.btn-underline-dash__text--white выбрать станцию метро
         ul(data-tabs).contacts__tabs.tabs.d-none.d-md-flex
           li.contacts__tab

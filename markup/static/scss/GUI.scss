@@ -25,6 +25,7 @@
 
   &--outline {
     border: 1px solid #d7d7d7;
+    background-color: #fff;
     color: $black;
 
     &:hover {
@@ -51,7 +52,7 @@
   // background-size: 14px 14px;
   background: transparent;
 
-  >.icon {
+  > .icon {
     width: 14px;
     height: 14px;
     fill: $white;
@@ -112,7 +113,9 @@
     height: 20px;
     border: none;
     background-color: transparent;
+    &:nth-last-child(2), &:last-child {
 
+    }
     &::before {
       content: '';
       position: absolute;
@@ -135,6 +138,7 @@
 }
 
 .expand-more {
+
   .active {
     span {
       display: inline;
@@ -157,7 +161,11 @@
     padding: 4px 0 4px;
     text-align: left;
     background-color: transparent;
-
+    &:hover {
+      span {
+        border-bottom-color: transparent;
+      }
+    }
     @include media-breakpoint-up(md) {
       display: none;
     }
@@ -168,6 +176,7 @@
 
     span {
       border-bottom: 1px dashed rgba($orange, .5);
+      transition: $transition-base;
     }
   }
 }
@@ -256,6 +265,7 @@
     text-transform: uppercase;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' d='M7.24 0L4 4.24.76 0h6.48z'/%3E%3C/svg%3E") right 24px top 50% no-repeat, $orange;
     background-size: 8px 5px;
+    overflow:hidden;
 
     &--expanded-xs {
       @include media-breakpoint-down(sm) {
@@ -407,9 +417,9 @@
     &.active {
       border-radius: 20px;
       background-color: $orange;
-      color:#fff;
+      color: #fff;
       &:hover {
-        color:#fff;
+        color: #fff;
         background-color: darken($orange, 10%);
       }
     }

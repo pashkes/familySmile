@@ -12,6 +12,9 @@
   }
   &__title {
     text-align: center;
+    @include media-breakpoint-up(xl) {
+      font-size: 32px;
+    }
   }
   &__subtitle {
     text-align: center;

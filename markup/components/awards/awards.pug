@@ -1,15 +1,21 @@
 mixin awards(data)
-	section.awards
-		.container
-			h2.awards__title.title-large Лицензии и награды
-			.awards__wrapper.js-awards-slider
-				div(role="listitem")
-					+awards-item({img: 'certificate-1', title: 'Подпись под лицензией <br> в&nbsp;две строки'})
-				div(role="listitem")
-					+awards-item({img: 'certificate-2', title: 'Подпись под лицензией'})
-				div(role="listitem")
-					+awards-item({img: 'certificate-3', title: 'Подпись под лицензией <br> в&nbsp;две строки'})
-				div(role="listitem")
-					+awards-item({img: 'certificate-4', title: 'Подпись под лицензией <br> в&nbsp;две строки'})
-				div(role="listitem")
-					+awards-item({img: 'certificate-5', title: 'Подпись под лицензией'})
+  section.awards
+    .container
+      h2.awards__title.title-large Лицензии и награды
+    .slider
+      button(type="button" aria-label="предыдущий слайд").slider__arrow.slider__arrow--prev.js-awards-control-prev-slider
+      button(type="button" aria-label="следующий слайд").slider__arrow.slider__arrow--next.js-awards-control-next-slider
+      .slider__wrapper.awards__wrapper
+        .slider__container
+          div(role="list").js-awards-slider
+            div(role="listitem")
+              +awards-item({img: 'certificate-1', title: 'Подпись под лицензией <br> в&nbsp;две строки'})
+            div(role="listitem")
+              +awards-item({img: 'certificate-2', title: 'Подпись под лицензией'})
+            div(role="listitem")
+              +awards-item({img: 'certificate-3', title: 'Подпись под лицензией <br> в&nbsp;две строки'})
+            div(role="listitem")
+              +awards-item({img: 'certificate-4', title: 'Подпись под лицензией <br> в&nbsp;две строки'})
+            div(role="listitem")
+              +awards-item({img: 'certificate-5', title: 'Подпись под лицензией'})
+

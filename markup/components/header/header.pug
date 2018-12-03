@@ -22,7 +22,7 @@ mixin header(data)
         .header__inner
           a(href="#").header__logo
             img(src="__static__img/general/logo.svg" alt="Стоматология для детей и взрослых")
-          nav(role="navigation").header__nav
+          nav().header__nav
             button(type="button" aria-expanded="false" aria-controls="menu").header__toggle-menu.js-show-menu.d-md-none
               span.header__icon-burger
             .header__menu-overlay.js-menu-wrapper
@@ -31,10 +31,10 @@ mixin header(data)
                   +icon('close', 14,14).js-menu-close
                 ul.header__menu#menu
                   li.header__item.header__item--active
-                    a(href="#").header__link О клинике
+                    a(href="#features").anchor.header__link О клинике
                   li.header__item#menu-services
                     a(href="#" role="button" aria-haspopup="true" aria-expanded="false").header__link.header__link--dropdown.d-none.d-md-block услуги
-                    ul(aria-labelby="menu-services").header__dropdown
+                    ul.header__dropdown
                       li.header__dropdown-item
                         a(href="#").header__dropdown-link Детская стоматология
                       li.header__dropdown-item
@@ -52,9 +52,10 @@ mixin header(data)
                       li.header__dropdown-item
                         a(href="#").header__dropdown-link Терапия
                   li.header__item
-                    a(href="#").header__link Контакты
+                    a(href="#contacts").anchor.header__link Контакты
           .header__contacts
             a(href="tel:+74951542628").header__tel +7 495 154-26-28
             button(type="button" aria-label="Открыть модальное окно" data-modal-content-id="modal-request" data-modal-prefix-class="request" data-modal-focus-toid="request-close").js-modal.js-modal-request.header__order-call.button.button--primary
               +icon('phone', 18, 18).d-md-none
-              .header__text.d-none.d-md-inline Заказать звонок
+              span.header__text.d-none.d-md-inline Заказать звонок
+

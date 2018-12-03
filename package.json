@@ -15,6 +15,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
+    "photoswipe": "^4.1.2",
     "tiny-slider": "^2.8.8",
     "van11y-accessible-hide-show-aria": "^3.0.1",
     "van11y-accessible-modal-window-aria": "^2.4.4",

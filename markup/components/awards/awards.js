@@ -1,26 +1,23 @@
 
 (function () {
-  const patients = tns({
-    center: true,
+  const awards = tns({
     container: '.js-awards-slider',
     controls: false,
-    items: 1,
-    // gutter: 24,
+    gutter: 24,
     mouseDrag: true,
-    nav: false,
+    prevButton: '.js-awards-control-prev-slider',
+    nextButton: '.js-awards-control-next-slider',
+    autoWidth: true,
+    nav: true,
+    navPosition: 'bottom',
     responsive: {
-      480: {
-        gutter: 32,
-        items: 2
-      },
       768: {
-        items: 3
+        gutter: 32,
       },
       1216: {
-        items: 4
-      },
-      1400: {
-        items: 5
+        autoWidth: false,
+        controls: true,
+        nav: false,
       }
     }
   });

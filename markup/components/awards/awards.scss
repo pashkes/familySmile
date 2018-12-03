@@ -17,4 +17,21 @@
   &__subtitle {
     text-align: center;
   }
+  &__title {
+    margin-bottom: 23px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 27px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 30px;
+    }
+  }
+  .tns-inner {
+    font-size: 0;
+  }
+  figure {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
 }

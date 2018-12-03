@@ -11,7 +11,8 @@ mixin price(data)
         .row
           .col-xl-4
             .price__header.d-xl-none
-              select.price__select.form__select#select-price.js-select-services
+              label(for="select-price").visually-hidden выбрать услугу
+              select.price__select.form__select.js-select-services#select-price
                 option(value="tab-1") Первичный прием
                 option(value="tab-2") Лечение и реставрация молочных зубов
                 option(value="tab-3") Лечение кариеса
@@ -20,7 +21,7 @@ mixin price(data)
                 option(value="tab-6" selected) удаление молочных зубов
                 option(value="tab-7") Пластика уздечки языка и губы
                 option(value="tab-8") Анестезиология
-              label(for="#select-price").btn-underline-dash
+              button(type="button").btn-underline-dash
                 span.btn-underline-dash__text.btn-underline-dash__text--orange выбрать услугу
             ul(data-tabs).price__tabs.tabs.js-tabs-price.d-none.d-xl-block
               li.price__item-tab

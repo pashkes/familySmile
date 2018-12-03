@@ -1,0 +1,35 @@
+.social {
+  display: inline-flex;
+  padding: 0;
+  margin-bottom: inherit;
+  list-style-type: none;
+  &__item {
+    margin-right: 16px;
+    overflow: hidden;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: $transition-base;
+    &:hover {
+      background-color: $orange;
+      .icon {
+        fill: #fff;
+      }
+    }
+    .icon {
+      fill: $orange;
+      transition: $transition-base;
+    }
+  }
+}
+
+
