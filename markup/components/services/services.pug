@@ -11,8 +11,8 @@ mixin serciveCard(data)
         h3.services__name !{data.title}
     .services__hover
       .services__hover-inner
-        a(href="#").services__button.button.button--primary Врачи
-        if anchor
+        a(href="#doctors").anchor.services__button.button.button--primary Врачи
+        if data.anchor
           a(href="#price").anchor.services__button.button.button--outline #{data.btnText}
         else
           a(href="#").services__button.button.button--outline #{data.btnText}

@@ -60,6 +60,16 @@
   }
   &__map-wrapper {
     max-width: 672px;
+    iframe {
+      width: 100%;
+      height: 344px;
+      @include media-breakpoint-up(md) {
+        height: 392px;
+      }
+      @include media-breakpoint-up(xl) {
+        height: 472px;
+      }
+    }
   }
   &__info {
     @include media-breakpoint-up(xl) {
@@ -109,3 +119,4 @@
     }
   }
 }
+

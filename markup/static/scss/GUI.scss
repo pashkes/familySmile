@@ -196,7 +196,9 @@
   &:hover {
     cursor: pointer;
     .btn-underline-dash__text--white {
-      color: $orange;
+      border-bottom-color: transparent;
+    }
+    .btn-underline-dash__text--orange {
       border-bottom-color: transparent;
     }
   }
@@ -223,7 +225,7 @@
     text-transform: uppercase;
     border-bottom-style: dashed;
     border-bottom-width: 1px;
-    transition: border-bottom-color, color, color 0.25s ease-in-out;
+    transition: $transition-base;
 
     &--white {
       color: #fff;
@@ -432,11 +434,23 @@
     }
   }
 }
-
+@keyframes fade-tab {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .tab-pane {
   display: none;
-
+  &__inner {
+  }
   &.active {
     display: block;
+    .tab-pane__inner {
+      animation: fade-tab .4s ease-in-out;
+    }
   }
 }
