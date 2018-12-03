@@ -15,10 +15,12 @@ mixin doctors(data)
     .container
       h2.section-gradient__title.title-large Наши врачи
       .section-gradient__nav.form
-        select.doctors__select.form__select.form__select--expanded-xs.d-md-none#select-doctors
-          each optionText in listServices
-            option #{optionText}
-        label(for="select-doctors").btn-underline-dash.d-md-none
+        .select.d-md-none
+          label(for="select-doctors").visually-hidden выбрать врача по специализации
+          select.doctors__select.form__select.form__select--expanded-xs#select-doctors
+            each optionText in listServices
+              option #{optionText}
+        button(type="button").btn-underline-dash.d-md-none.js-simulate-click-to-select
           span.btn-underline-dash__text.btn-underline-dash__text--white выбрать врача по специализации
         div(role="group" aria-label="выбрать врача по специализации").btn-group.d-none.d-md-flex
           each btnText, index in listServices

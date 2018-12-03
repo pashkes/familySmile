@@ -22,13 +22,23 @@
     }
   });
 
-  // add and remove class active
-  const buttonsGroup = Array.from(document.querySelectorAll('.js-button-group'));
-  buttonsGroup.forEach((element) => {
-    element.addEventListener('click', (evt) => {
-      buttonsGroup.forEach((currentButtons) => currentButtons.classList.remove('active'));
-      evt.target.closest('.js-button-group').classList.add('active');
+  window.onload = function () {
+    const buttonsGroup = Array.from(document.querySelectorAll('.js-button-group'));
+    buttonsGroup.forEach((element) => {
+      element.addEventListener('click', (evt) => {
+        buttonsGroup.forEach((currentButtons) => currentButtons.classList.remove('active'));
+        evt.target.closest('.js-button-group').classList.add('active');
+      });
     });
-  });
+  };
 })();
 
+(function () {
+  const select = new CustomSelect({
+    elem: 'select-doctors'
+  });
+  const btnToSelect = document.querySelector('.js-simulate-click-to-select');
+  btnToSelect.addEventListener('click', function () {
+    select.open();
+  });
+})();

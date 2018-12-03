@@ -1,7 +1,6 @@
 (function () {
   const showMore = Array.from(document.querySelectorAll('.js-expandmore'));
   const expandBlock = document.querySelectorAll('.js-expand-more ');
-  const exapndText = document.querySelectorAll('.js-expand');
   showMore.forEach((element, index) => {
     element.addEventListener('click', function (evt) {
       evt.target.closest('.js-expandmore').style.display = 'none';
