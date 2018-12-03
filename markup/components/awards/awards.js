@@ -10,6 +10,7 @@
     autoWidth: true,
     nav: true,
     navPosition: 'bottom',
+    loop: false,
     responsive: {
       768: {
         gutter: 32,

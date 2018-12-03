@@ -32,7 +32,6 @@
     });
   };
 })();
-
 (function () {
   const select = new CustomSelect({
     elem: 'select-doctors'
