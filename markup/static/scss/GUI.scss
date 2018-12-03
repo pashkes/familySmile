@@ -12,7 +12,9 @@
   text-align: center;
   transition: $transition-base;
   color: #fff;
-
+  &:hover {
+    cursor: pointer;
+  }
   &--primary {
     background-color: $orange;
     color: #fff;
@@ -162,6 +164,7 @@
     text-align: left;
     background-color: transparent;
     &:hover {
+      cursor: pointer;
       span {
         border-bottom-color: transparent;
       }
@@ -191,6 +194,7 @@
   transition: background-color, color, color 0.25s ease-in-out;
 
   &:hover {
+    cursor: pointer;
     .btn-underline-dash__text--white {
       color: $orange;
       border-bottom-color: transparent;
@@ -265,7 +269,7 @@
     text-transform: uppercase;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' d='M7.24 0L4 4.24.76 0h6.48z'/%3E%3C/svg%3E") right 24px top 50% no-repeat, $orange;
     background-size: 8px 5px;
-    overflow:hidden;
+    overflow: hidden;
 
     &--expanded-xs {
       @include media-breakpoint-down(sm) {
@@ -339,6 +343,9 @@
     position: absolute;
     top: 50%;
     margin-top: -20px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__container {

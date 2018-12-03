@@ -30,7 +30,7 @@ mixin header(data)
                 button(aria-label="закрыть меню" aria-hidden="false").header__menu-close.button-close.d-md-none
                   +icon('close', 14,14).js-menu-close
                 ul.header__menu#menu
-                  li.header__item.header__item--active
+                  li.header__item
                     a(href="#features").anchor.header__link О клинике
                   li.header__item#menu-services
                     a(href="#" role="button" aria-haspopup="true" aria-expanded="false").header__link.header__link--dropdown.d-none.d-md-block услуги
