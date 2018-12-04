@@ -19,6 +19,7 @@
         autoWidth: false,
         controls: true,
         nav: false,
+        loop: true,
       }
     }
   });
