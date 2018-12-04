@@ -10475,7 +10475,6 @@ var CustomSelect = function CustomSelect(options) {
   };
 };
 "use strict";
-"use strict";
 
 (function () {
   var awards = tns({
@@ -10496,11 +10495,13 @@ var CustomSelect = function CustomSelect(options) {
       1216: {
         autoWidth: false,
         controls: true,
-        nav: false
+        nav: false,
+        loop: true
       }
     }
   });
 })();
+"use strict";
 "use strict";
 
 (function () {
@@ -10739,4 +10740,3 @@ tabby.init();
     gutter: 24
   });
 })();
-//# sourceMappingURL=main.js.map
