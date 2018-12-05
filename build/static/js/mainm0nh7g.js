@@ -11142,14 +11142,6 @@ var CustomSelect = function CustomSelect(options) {
 "use strict";
 
 (function () {
-  var selectContacts = new CustomSelect({
-    elem: 'select-contacts',
-    close: 'close-select-contacts'
-  });
-})();
-"use strict";
-
-(function () {
   var doctors = tns({
     container: '.js-slider-doctors',
     controls: false,
@@ -11190,6 +11182,14 @@ var CustomSelect = function CustomSelect(options) {
   var select = new CustomSelect({
     elem: 'select-doctors',
     close: 'close-select-doctors'
+  });
+})();
+"use strict";
+
+(function () {
+  var selectContacts = new CustomSelect({
+    elem: 'select-contacts',
+    close: 'close-select-contacts'
   });
 })();
 "use strict";
@@ -11271,6 +11271,7 @@ var CustomSelect = function CustomSelect(options) {
 "use strict";
 "use strict";
 "use strict";
+"use strict";
 
 (function () {
   var form = document.querySelector('#order');
@@ -11282,7 +11283,6 @@ var CustomSelect = function CustomSelect(options) {
     success.click();
   });
 })();
-"use strict";
 "use strict";
 
 (function () {
