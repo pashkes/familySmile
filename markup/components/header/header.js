@@ -57,6 +57,7 @@
   const requestBtn = document.querySelector('.js-modal-request');
   requestBtn.addEventListener('click', () => {
     const form = document.querySelector('.request-modal .js-request-form');
+    $('.js-phone-mask-request').mask('+7(999) 999-99-99', {placeholder: '+7(___)___ -__-__'});
 
     if (!form) {
       return false;

@@ -14,7 +14,7 @@ mixin order(data)
                     input(placeholder="Представьтесь, пожалуйста" required).form__field.form__field--white#order-name
                   .order__field-wrapper
                     label(for="order-mail").visually-hidden Ваш номер телефона
-                    input(type="tel" placeholder="Контактный номер телефона*" required).form__field.form__field--white#order-mail
+                    input(type="tel" placeholder="Контактный номер телефона*" required).form__field.form__field--white.js-phone-mask#order-mail
                 button.order__submit.button.button--primary.button--xs-expanded(type="submit") отправить заявку
                 button.js-order-success.js-modal.hidden(type="button" aria-label="Открыть модальное окно" data-modal-content-id="modal-success" data-modal-prefix-class="request" data-modal-focus-toid="success-close") отправить заявку
               p.order__requirement.
