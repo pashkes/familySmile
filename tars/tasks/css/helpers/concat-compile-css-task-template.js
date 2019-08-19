@@ -150,11 +150,9 @@ module.exports = function generateTaskContent(browser) {
                 lastStylesFilesToConcatinate
             );
 
-            if (tars.pluginsConfig.autoprefixerConfig) {
-                postProcessors.push(
-                    autoprefixer({browsers: tars.pluginsConfig.autoprefixerConfig})
-                );
-            }
+            postProcessors.push(
+                autoprefixer()
+            );
 
             generateSourceMaps = tars.config.sourcemaps.css.active && tars.options.watch.isActive;
 
@@ -187,7 +185,7 @@ module.exports = function generateTaskContent(browser) {
         .pipe(postcss(postProcessors))
         .pipe(concat(`${compiledFileName}${tars.options.build.hash}.css`))
         .pipe(gulpif(generateSourceMaps, sourcemaps.write(sourceMapsDest)))
-        .pipe(gulp.dest(`./dev/${tars.config.fs.staticFolderName}/css/`))
+        .pipe(gulp.dest(`${tars.config.devPath}${tars.config.fs.staticFolderName}/css/`))
         .pipe(browserSync.reload({ stream: true, match: '**/*.css' }))
         .pipe(
             notifier.success(successMessage)
