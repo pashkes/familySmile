@@ -3,7 +3,8 @@
 
 **Pages of list:** 
 
- 1. [Home](https://pashkes.github.io/etarget/)
+ 1. [Home](https://pashkes.github.io/familySmile/)
+ 2. [Child](https://pashkes.github.io/familySmile/child)
 
  
 **How to start dev server?**  
